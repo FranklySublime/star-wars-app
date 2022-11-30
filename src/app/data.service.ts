@@ -1,16 +1,15 @@
 import { HttpClient } from '@angular/common/http';
-import { Starship, SwapiResponse, People } from './interfaces';
-
 import { Observable, map, expand, reduce, EMPTY } from 'rxjs';
 import { Injectable } from '@angular/core';
 
-import { Subject } from 'rxjs';
+import { Starship, SwapiResponse, People } from './interfaces';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
-  baseUrl = 'https://swapi.dev/api/';
+  baseUrl: string = `${environment.apiUrl}`;
   starships: Starship[] = [];
   people: People[] = [];
   loading: boolean = false;
