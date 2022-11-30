@@ -1,28 +1,37 @@
 # StarWarsApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.1.
+This project was built in [Angular](https://angular.io/) v15 with [TypeScript](https://www.typescriptlang.org/) using the Star Wars API ([SWAPI](https://swapi.dev/))
 
-## Development server
+## Running this application locally
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To run this application locally you will need to clone this repository or clone a fork of this repository.
 
-## Code scaffolding
+Make sure to run `npm install` or `npm i` to install all dependencies neeed for this project.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Assuming you have the angular CLI installed, run `ng serve` for a local dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Build
+If you are missing the angular CLI you will need to install it globally in your environment using the following command via npm. This command will only work on the assumption you have node and npm installed.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+npm install -g @angular/cli
+```
 
-## Running unit tests
+As this application is built with TypeScript, you will also need to install TypeScript `npm install -g typescript` if you haven't done so already.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Application Features
 
-## Running end-to-end tests
+- The user can view a list of starships on the homepage witha summary of the ships specifications
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Clicking on a starship name from the list will navigate the user to the ship's detailed view.
 
-## Further help
+- If the starship has any known pilots, the user may additionally click on the pilot's name, which will navigate them to the person's details page, to get more information on that pilot.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# star-wars-app
+- The person's details may include additional starships they've been known to fly or be a part of the crew. The user may click on the starship listed to navigate to said starship's details.
+
+- At any point the user can navigate to the section preferred by clicking on the desired link's in the navigation bar.
+
+## Application Notes
+
+- The application will load all the data once the application is initially launched or on a refresh.
+
+- Sometimes the load times are impaired due to API call times. However, once loaded the navigation on the site is kicked into hyperdrive.
