@@ -1,10 +1,13 @@
-<div *ngIf="dataService.loading">
+<div class="people-details-wrapper" *ngIf="dataService.loading">
   <app-error
     *ngIf="!dataService.getPerson(personNameFromRoute).length"
   ></app-error>
-  <div *ngIf="dataService.getPerson(personNameFromRoute).length">
+  <div class="person" *ngIf="dataService.getPerson(personNameFromRoute).length">
     <h2>People</h2>
-    <div *ngFor="let person of dataService.getPerson(personNameFromRoute)">
+    <div
+      class="person-details-flex"
+      *ngFor="let person of dataService.getPerson(personNameFromRoute)"
+    >
       <h3>{{ person.name }}</h3>
       <h4>Details</h4>
       <div>

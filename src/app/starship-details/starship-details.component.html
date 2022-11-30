@@ -1,11 +1,15 @@
-<div *ngIf="dataService.loading">
+<div class="starship-details-wrapper" *ngIf="dataService.loading">
   <app-error
     *ngIf="!dataService.getStarship(starshipNameFromRoute).length"
   ></app-error>
 
-  <div *ngIf="dataService.getStarship(starshipNameFromRoute).length">
+  <div
+    class="starship-item"
+    *ngIf="dataService.getStarship(starshipNameFromRoute).length"
+  >
     <h2>Starship Details</h2>
     <div
+      class="starship-details-flex"
       *ngFor="let starship of dataService.getStarship(starshipNameFromRoute)"
     >
       <h3>{{ starship.name }}</h3>
