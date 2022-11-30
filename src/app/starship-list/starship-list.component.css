@@ -1,0 +1,48 @@
+/* Starship-List Styling */
+
+app-starship-list h3 {
+  text-decoration: underline;
+}
+
+app-starship-list h3:hover {
+  opacity: 0.8;
+}
+app-starship-list h4 {
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+app-starship-list span {
+  font-weight: bold;
+}
+
+.starship-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.starship-list-flex {
+  max-width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.starship-item {
+  width: 20rem;
+  border: 4px solid black;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.starship-item > ul {
+  width: 80%;
+  margin-bottom: 1rem;
+}

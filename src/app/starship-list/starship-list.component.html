@@ -11,11 +11,11 @@
       </h3>
       <h4>Summary</h4>
       <ul>
-        <li>Model {{ starship.model }}</li>
-        <li>Manufacturer {{ starship.manufacturer }}</li>
-        <li>Cost (in credits) {{ starship.cost_in_credits }}</li>
-        <li>Length {{ starship.length }}</li>
-        <li>Top Speed {{ starship.max_atmosphering_speed }}</li>
+        <li><span>Model: </span>{{ starship.model }}</li>
+        <li><span>Manufacturer: </span>{{ starship.manufacturer }}</li>
+        <li><span>Cost: </span>(in credits) {{ starship.cost_in_credits }}</li>
+        <li><span>Length: </span>{{ starship.length }}</li>
+        <li><span>Top Speed: </span>{{ starship.max_atmosphering_speed }}</li>
       </ul>
 
       <!-- <span *ngIf="starship.length > 0"></span> -->
