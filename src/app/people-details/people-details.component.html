@@ -1,0 +1,11 @@
+<div *ngIf="dataService.loading">
+  <app-error
+    *ngIf="!dataService.getPerson(personNameFromRoute).length"
+  ></app-error>
+  <div *ngIf="dataService.getPerson(personNameFromRoute).length">
+    <h2>People</h2>
+    <div *ngFor="let person of dataService.getPerson(personNameFromRoute)">
+      <h3>{{ person.name }}</h3>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+<div *ngIf="dataService.loading">
+  <app-error
+    *ngIf="!dataService.getStarship(starshipNameFromRoute).length"
+  ></app-error>
+
+  <div *ngIf="dataService.getStarship(starshipNameFromRoute).length">
+    <h2>Starship Details</h2>
+    <div
+      *ngFor="let starship of dataService.getStarship(starshipNameFromRoute)"
+    >
+      <h3>{{ starship.name }}</h3>
+      <h4>Details</h4>
+      <div>
+        <ul>
+          <li>
+            <p>
+              Model:
+              <span>{{ starship.model }}</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              Manufacturer:
+              <span>{{ starship.manufacturer }}</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              Cost in Credits:
+              <span>{{ starship.cost_in_credits | currency }}</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              Length:
+              <span>{{ starship.length }}</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              Top Speed:
+              <span>{{ starship.max_atmosphering_speed }}</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              Crew:
+              <span>{{ starship.crew }}</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              Passengers:
+              <span>{{ starship.passengers }}</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              Cargo Capacity:
+              <span>{{ starship.cargo_capacity }}</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              Hyperdrive rating:
+              <span>{{ starship.hyperdrive_rating }}</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              MGLT:
+              <span>{{ starship.MGLT }}</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              Starship Class:
+              <span>{{ starship.starship_class }}</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <h4 *ngIf="starship.pilots.length">Pilots</h4>
+      <ul *ngFor="let pilot of dataService.getPilots(starship)">
+        <li>
+          <a [routerLink]="['/people', pilot.name]">{{ pilot.name }}</a>
+        </li>
+      </ul>
+    </div>
+    <!-- <app-error nfIf="true"></app-error> -->
+  </div>
+</div>
