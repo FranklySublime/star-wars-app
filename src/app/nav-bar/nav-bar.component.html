@@ -1,3 +1,20 @@
-<a [routerLink]="['/']">
-  <h1>Star Pilots</h1>
-</a>
+<header>
+  <a [routerLink]="['/']">
+    <h1>Star Pilots</h1>
+  </a>
+
+  <nav>
+    <ul>
+      <li>
+        <a [routerLink]="['/starships']" routerLinkActive="active-link"
+          ><p>Starships</p></a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['/people']" routerLinkActive="active-link"
+          ><p>People</p></a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>

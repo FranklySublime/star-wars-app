@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  margin: 0 1rem;
+}
+
+a > p {
+  color: #ffff;
+  text-decoration: none;
+}
