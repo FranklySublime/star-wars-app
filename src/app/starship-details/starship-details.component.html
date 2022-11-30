@@ -27,7 +27,7 @@
           <li>
             <p>
               Cost in Credits:
-              <span>{{ starship.cost_in_credits | currency }}</span>
+              <span>{{ starship.cost_in_credits }}</span>
             </p>
           </li>
           <li>
@@ -83,7 +83,9 @@
       <h4 *ngIf="starship.pilots.length">Pilots</h4>
       <ul *ngFor="let pilot of dataService.getPilots(starship)">
         <li>
-          <a [routerLink]="['/people', pilot.name]">{{ pilot.name }}</a>
+          <p>
+            <a [routerLink]="['/people', pilot.name]">{{ pilot.name }}</a>
+          </p>
         </li>
       </ul>
     </div>
