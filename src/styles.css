@@ -46,3 +46,20 @@ app-nav-bar h1 {
   color: white;
   margin: 0;
 }
+
+app-starship-list-item {
+  aspect-ratio: 1/1;
+  width: 20rem;
+  border: 4px solid black;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+app-starship-list-item > ul {
+  width: 80%;
+}
