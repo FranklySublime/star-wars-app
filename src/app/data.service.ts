@@ -19,7 +19,6 @@ export class DataService {
 
     // setting all starships
     this.getStarships().subscribe((data) => {
-      console.log(data);
       this.starships = data;
     });
 
@@ -27,17 +26,13 @@ export class DataService {
     this.getPeople().subscribe((data) => {
       this.people = data;
       this.loading = true;
-      console.log(data);
-      console.log(this.loading);
     });
   }
 
   getStarships(): Observable<Starship[]> {
     return this.getStarshipsRequest(`${this.baseUrl}starships/`).pipe(
       expand((response: SwapiResponse<Starship>) => {
-        console.log(response);
         if (response && response.next) {
-          console.log(response.next);
           return this.getStarshipsRequest(response.next);
         } else {
           return EMPTY;
@@ -63,9 +58,7 @@ export class DataService {
   getPeople(): Observable<People[]> {
     return this.getPeopleRequest(`${this.baseUrl}people/`).pipe(
       expand((response: SwapiResponse<People>) => {
-        console.log(response);
         if (response && response.next) {
-          console.log(response.next);
           return this.getPeopleRequest(response.next);
         } else {
           return EMPTY;

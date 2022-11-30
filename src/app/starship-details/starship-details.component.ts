@@ -16,7 +16,6 @@ export class StarshipDetailsComponent implements OnInit {
   ngOnInit(): void {
     // getting the starship name from the current route
     this.routeParams = this.route.snapshot.paramMap;
-    console.log(this.routeParams);
     this.starshipNameFromRoute = this.routeParams.get('starshipName');
   }
 }

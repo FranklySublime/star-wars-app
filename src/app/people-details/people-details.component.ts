@@ -16,6 +16,5 @@ export class PeopleDetailsComponent implements OnInit {
     // Find the starship param from the current route
     this.routeParams = this.route.snapshot.paramMap;
     this.personNameFromRoute = this.routeParams.get('personName');
-    console.log(this.personNameFromRoute);
   }
 }
