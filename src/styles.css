@@ -52,7 +52,9 @@ app-nav-bar h1 {
   margin: 0;
 }
 
-app-starship-list-item {
+/* List Items styling */
+app-starship-list-item,
+app-people-list-item {
   aspect-ratio: 1/1;
   width: 20rem;
   border: 4px solid black;
@@ -65,6 +67,7 @@ app-starship-list-item {
   align-items: center;
 }
 
-app-starship-list-item > ul {
+app-starship-list-item > ul,
+app-people-list-item > ul {
   width: 80%;
 }

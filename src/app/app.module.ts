@@ -14,6 +14,7 @@ import { PeopleListComponent } from './people-list/people-list.component';
 import { PeopleDetailsComponent } from './people-details/people-details.component';
 import { DataService } from './data.service';
 import { LoadingComponent } from './loading/loading.component';
+import { PeopleListItemComponent } from './people-list-item/people-list-item.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { LoadingComponent } from './loading/loading.component';
     StarshipListItemComponent,
     ErrorComponent,
     PeopleDetailsComponent,
+    PeopleListComponent,
     LoadingComponent,
+    PeopleListItemComponent,
   ],
   imports: [
     BrowserModule,

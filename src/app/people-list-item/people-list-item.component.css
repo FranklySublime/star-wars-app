@@ -1,0 +1,15 @@
+h3 {
+  text-decoration: underline;
+}
+
+h3:hover {
+  opacity: 0.5;
+}
+h4 {
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+span {
+  font-weight: bold;
+}

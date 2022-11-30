@@ -1,1 +1,8 @@
-<p>people-list works!</p>
+<div class="people-list-wrapper" *ngIf="dataService.loading">
+  <h2>People</h2>
+  <div class="people-list-flex">
+    <div *ngFor="let person of dataService.people">
+      <app-people-list-item [item]="person"></app-people-list-item>
+    </div>
+  </div>
+</div>
