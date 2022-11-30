@@ -85,6 +85,16 @@ export class DataService {
     return this.people.filter((person) => person.name === personRoute); //expected array length of 1
   }
 
+  getStarshipsForPerson(person: People) {
+    const { starships } = person;
+    return this.starships.filter((starship) => {
+      return starships.includes(starship.url);
+    });
+  }
+
+  // http requests to api are listed below
+  // each for the starships and people GET endpoints respectively
+
   getStarshipsRequest(url: string) {
     return this.http.get<SwapiResponse<Starship>>(url);
   }

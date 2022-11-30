@@ -6,6 +6,57 @@
     <h2>People</h2>
     <div *ngFor="let person of dataService.getPerson(personNameFromRoute)">
       <h3>{{ person.name }}</h3>
+      <h4>Details</h4>
+      <div>
+        <ul>
+          <li>
+            <p>
+              Height:
+              <span>{{ person.height }}cm</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              Mass:
+              <span>{{ person.mass }}kg</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              Hair Color:
+              <span>{{ person.hair_color }}</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              Skin Color :
+              <span>{{ person.skin_color }}</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              Gender:
+              <span>{{ person.gender }}</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              Birth Year:
+              <span>{{ person.birth_year }}</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <h4 *ngIf="person.starships.length">Starships</h4>
+      <ul *ngFor="let starship of dataService.getStarshipsForPerson(person)">
+        <li>
+          <p>
+            <a [routerLink]="['/starships', starship.name]">{{
+              starship.name
+            }}</a>
+          </p>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
