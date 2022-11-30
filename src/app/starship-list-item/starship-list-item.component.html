@@ -1,0 +1,15 @@
+<h3>
+  <a
+    [title]="item.name + ' details'"
+    [routerLink]="['/starships', item.name]"
+    >{{ item.name }}</a
+  >
+</h3>
+<h4>Summary</h4>
+<ul>
+  <li><span>Model: </span>{{ item.model }}</li>
+  <li><span>Manufacturer: </span>{{ item.manufacturer }}</li>
+  <li><span>Cost: </span>(in credits) {{ item.cost_in_credits }}</li>
+  <li><span>Length: </span>{{ item.length }}</li>
+  <li><span>Top Speed: </span>{{ item.max_atmosphering_speed }}</li>
+</ul>

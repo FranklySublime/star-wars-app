@@ -2,23 +2,7 @@
   <h2>Starships</h2>
   <div class="starship-list-flex">
     <div class="starship-item" *ngFor="let starship of dataService.starships">
-      <h3>
-        <a
-          [title]="starship.name + ' details'"
-          [routerLink]="['/starships', starship.name]"
-          >{{ starship.name }}</a
-        >
-      </h3>
-      <h4>Summary</h4>
-      <ul>
-        <li><span>Model: </span>{{ starship.model }}</li>
-        <li><span>Manufacturer: </span>{{ starship.manufacturer }}</li>
-        <li><span>Cost: </span>(in credits) {{ starship.cost_in_credits }}</li>
-        <li><span>Length: </span>{{ starship.length }}</li>
-        <li><span>Top Speed: </span>{{ starship.max_atmosphering_speed }}</li>
-      </ul>
-
-      <!-- <span *ngIf="starship.length > 0"></span> -->
+      <app-starship-list-item [item]="starship"></app-starship-list-item>
     </div>
   </div>
 </div>
