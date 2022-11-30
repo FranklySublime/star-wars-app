@@ -1,8 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, map } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
 
-import { Starship } from '../interfaces';
 import { DataService } from '../data.service';
 
 @Component({

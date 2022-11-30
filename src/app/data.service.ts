@@ -14,9 +14,6 @@ export class DataService {
   people: People[] = [];
   loading: boolean = false;
 
-  // starship!: Starship;
-  // starship: Subject<Starship> = new Subject<Starship>();
-
   constructor(private http: HttpClient) {
     // initialize starships on load at the service/provider level
 

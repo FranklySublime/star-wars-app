@@ -1,7 +1,7 @@
 <div class="starship-list-wrapper" *ngIf="dataService.loading">
   <h2>Starships</h2>
   <div class="starship-list-flex">
-    <div class="starship-item" *ngFor="let starship of dataService.starships">
+    <div *ngFor="let starship of dataService.starships">
       <app-starship-list-item [item]="starship"></app-starship-list-item>
     </div>
   </div>
