@@ -2,6 +2,8 @@
 
 This project was built in [Angular](https://angular.io/) v15 with [TypeScript](https://www.typescriptlang.org/) using the Star Wars API ([SWAPI](https://swapi.dev/))
 
+You can visit a production version of the site [here](https://star-wars-app-franklysublime.netlify.app/)
+
 ## Running this application locally
 
 To run this application locally you will need to clone this repository or clone a fork of this repository.
