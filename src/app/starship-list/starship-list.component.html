@@ -1,23 +1,24 @@
-<div *ngIf="dataService.loading">
+<div class="starship-list-wrapper" *ngIf="dataService.loading">
   <h2>Starships</h2>
+  <div class="starship-list-flex">
+    <div class="starship-item" *ngFor="let starship of dataService.starships">
+      <h3>
+        <a
+          [title]="starship.name + ' details'"
+          [routerLink]="['/starships', starship.name]"
+          >{{ starship.name }}</a
+        >
+      </h3>
+      <h4>Summary</h4>
+      <ul>
+        <li>Model {{ starship.model }}</li>
+        <li>Manufacturer {{ starship.manufacturer }}</li>
+        <li>Cost (in credits) {{ starship.cost_in_credits }}</li>
+        <li>Length {{ starship.length }}</li>
+        <li>Top Speed {{ starship.max_atmosphering_speed }}</li>
+      </ul>
 
-  <div class="starship-item" *ngFor="let starship of dataService.starships">
-    <span
-      ><a
-        [title]="starship.name + ' details'"
-        [routerLink]="['/starships', starship.name]"
-        >{{ starship.name }}</a
-      ></span
-    >
-    <p>Summary</p>
-    <ul>
-      <li>Model {{ starship.model }}</li>
-      <li>Manufacturer {{ starship.manufacturer }}</li>
-      <li>Cost (in credits) {{ starship.cost_in_credits }}</li>
-      <li>Length {{ starship.length }}</li>
-      <li>Top Speed {{ starship.max_atmosphering_speed }}</li>
-    </ul>
-
-    <!-- <span *ngIf="starship.length > 0"></span> -->
+      <!-- <span *ngIf="starship.length > 0"></span> -->
+    </div>
   </div>
 </div>
